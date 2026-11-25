@@ -103,6 +103,12 @@ KNOWLEDGE_BASE: list[tuple[list[str], str]] = [
     (["token", "cost", "chi phí", "budget"],
      "Chi phí LLM tính theo token: cost = input_tokens x giá input + output_tokens x giá output. "
      "Cần theo dõi cost theo thời gian thực và đặt budget alert."),
+    (["jwt"],
+    "API key là chuỗi bí mật cố định, không tự hết hạn. JWT là token có chữ ký số, chứa "
+    "thông tin user và thời điểm hết hạn; server xác minh chữ ký mà không cần tra database."),
+    (["hpa", "kubernetes", "autoscal"],
+    "Kubernetes HPA (Horizontal Pod Autoscaler) scale số pod dựa trên CPU, memory "
+    "hoặc custom metrics như RPS hay độ dài hàng đợi."),
     (["golden dataset", "eval", "đánh giá chất lượng", "regression"],
      "Eval chất lượng dùng golden dataset: bộ câu hỏi có đáp án mong đợi. Chạy eval trước mỗi lần deploy "
      "để bắt regression, ví dụ accuracy giảm so với phiên bản trước."),
